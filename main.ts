@@ -3,7 +3,7 @@ import { addProduct, products } from './app/products/product.service';
 
 for (let i = 0; i < 50; i++) {
   addProduct({
-    id: faker.random.uuid(),
+    // id: faker.random.uuid(),
     description: faker.commerce.productDescription(),
     image: faker.image.imageUrl(),
     color: faker.commerce.color(),
@@ -12,15 +12,16 @@ for (let i = 0; i < 50; i++) {
     tags: [faker.commerce.productAdjective(), faker.commerce.productMaterial()],
     title: faker.commerce.productName(),
     size: faker.random.arrayElement(['S', 'M', 'L', 'XL']),
-    createdAt: faker.date.recent(),
-    updatedAt: faker.date.recent(),
     stock: faker.random.number(),
-    category: {
-      id: faker.random.uuid(),
-      name: faker.commerce.department(),
-      createdAt: faker.date.recent(),
-      updatedAt: faker.date.recent()
-    }
+    categoryId: faker.random.uuid(),
+    // createdAt: faker.date.recent(),
+    // updatedAt: faker.date.recent(),
+    // category: {
+    //   id: faker.random.uuid(),
+    //   name: faker.commerce.department(),
+    //   createdAt: faker.date.recent(),
+    //   updatedAt: faker.date.recent()
+    // }
   })
   
 }
